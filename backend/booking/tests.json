@@ -1,0 +1,30 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "POST booking success",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Тест Клиент",
+        "phone": "+79001234567",
+        "service": "Чистка лица",
+        "salon": "ул. Стара-Загора 140",
+        "comment": "Тестовая заявка"
+      },
+      "expectedStatus": 200
+    },
+    {
+      "name": "POST missing fields",
+      "method": "POST",
+      "path": "/",
+      "body": {"name": "Тест"},
+      "expectedStatus": 400
+    }
+  ]
+}
