@@ -1,30 +1,30 @@
 import { useEffect, useRef, useState } from "react"
-import { Home, Building, Armchair, Trees } from "lucide-react"
+import { Sparkles, CalendarCheck, ShoppingBag, MapPin } from "lucide-react"
 import { HighlightedText } from "./HighlightedText"
 
 const expertiseAreas = [
   {
-    title: "Жилая архитектура",
-    description: "Создаем дома, которые сочетают красоту с комфортом, где каждое пространство служит и форме, и функции.",
-    icon: Home,
+    title: "Косметологические процедуры",
+    description: "Профессиональный уход за кожей: чистки, пилинги, инъекционные процедуры и антивозрастные программы от сертифицированных специалистов.",
+    icon: Sparkles,
   },
   {
-    title: "Коммерческие объекты",
+    title: "Онлайн-запись 24/7",
     description:
-      "Проектируем рабочие пространства, которые вдохновляют на продуктивность и отражают ценности передовых организаций.",
-    icon: Building,
+      "Запишитесь на любую процедуру в удобное время через сайт. Выбирайте мастера, дату и время — подтверждение придёт сразу.",
+    icon: CalendarCheck,
   },
   {
-    title: "Дизайн интерьеров",
+    title: "Магазин косметики",
     description:
-      "Создаем интерьеры, которые гармонируют с архитектурной оболочкой, формируя целостный пространственный опыт.",
-    icon: Armchair,
+      "Широкий ассортимент профессиональной и уходовой косметики. Только сертифицированные бренды с доказанной эффективностью.",
+    icon: ShoppingBag,
   },
   {
-    title: "Градостроительство",
+    title: "Несколько локаций",
     description:
-      "Формируем сообщества через продуманную интеграцию общественных пространств, зданий и природных элементов.",
-    icon: Trees,
+      "Студии MagicShine в удобных районах города. Выбирайте ближайший салон на карте и приходите в любое время работы.",
+    icon: MapPin,
   },
 ]
 
@@ -57,14 +57,14 @@ export function Expertise() {
     <section id="services" ref={sectionRef} className="py-32 md:py-29">
       <div className="container mx-auto px-6 md:px-12">
         <div className="max-w-3xl mb-20">
-          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Наши услуги</p>
+          <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase mb-6">Всё для вашей красоты</p>
           <h2 className="text-6xl font-medium leading-[1.15] tracking-tight mb-6 text-balance lg:text-8xl">
-            <HighlightedText>Экспертиза</HighlightedText>, отточенная
+            <HighlightedText>Запишитесь</HighlightedText> или
             <br />
-            практикой
+            приходите
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Каждый проект опирается на десятилетия совокупного опыта, создавая архитектуру, которая одновременно инновационна и вневременна.
+            Онлайн-запись, профессиональные процедуры и магазин косметики — всё в одном месте. MagicShine рядом с вами.
           </p>
         </div>
 
@@ -91,7 +91,7 @@ export function Expertise() {
                     transitionDelay: `${index * 150}ms`,
                   }}
                 >
-                  <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.25} />
+                  <Icon className="w-10 h-10 mb-4 text-foreground" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-xl font-medium mb-4">{area.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{area.description}</p>
